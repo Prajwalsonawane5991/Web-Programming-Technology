@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <Script>
+            function f1()
+            {
+                let a=document.getElementById("i1")
+                let s=a.value
+                let str=s.toUpperCase()
+                document.getElementById("p1").innerHTML=str
+                // let str1=s.toLowerCase()
+                // document.getElementById("p1").innerHTML=str1
+            }
+        </Script>
+    </head>
+    <body>
+ name:<input type="text" placeholder="Enter a name..." id="i1">
+ <input type="button" value="Show UpperCase" onclick="f1()">
+ <!-- <input type="button" value="Show lowercase" onclick="f1()"> -->
+ 
+
+ <p id="p1"></p>
+</body>
+</html>

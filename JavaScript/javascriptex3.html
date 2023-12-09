@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script>
+        function calculate(){
+        let n1=parseInt(document.getByElementId("p1").value)
+        let n2=parseInt(document.getByElementId("p2").value)
+        let Operation=document.getElementById("Operation").value
+        let result 
+        switch(op)
+        {
+            case '+' : result = n1 + n2; break; 
+            case '-' : result =  n1 - n2; break;
+            case '*' : result =   n1 * n2; break;
+            case '/' : result =  n1 / n2; break;
+        }
+        let str= `<i> ${n1} ${op} ${n2} = ${result} </i>`  
+        document.getElementById("sp1").innerHTML=str
+        }
+    </script>
+    </head>
+    <body>
+        <pre>
+        Enter A 1 no:<input type="number" value="0" id="p1">
+        Enter A 2 No:<input type="number" value="0" id="p2">
+        Select Operation:<select id="Operation" onchange="calculate()">
+            <option>Selected</option>
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select>
+        <p >The result is<span id="sp1"></span></p>
+    </pre>
+    </body>
+</html>
