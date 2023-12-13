@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Upper Lower Title </title>
+      <script>
+        function f1()
+        {
+            let data=document.getElementById("i1").value
+            let in1=document.getElementById("i2").checked
+            let in2=document.getElementById("i3").checked
+            let in3=document.getElementById("i4").checked
+            let up,low,title
+            console.log(data)
+            if(in1)
+            {
+               up=data.toUpperCase()
+               document.getElementById("o1").innerHTML=up
+            }
+            if(in2)
+            {
+               low=data.toLowerCase()
+               document.getElementById("o1").innerHTML=low
+            }
+            if(in3)
+            {
+              title=data.charAt(0).toUpperCase()+data.substring(1).toLowerCase()
+              document.getElementById("o1").innerHTML=title
+            }
+
+        }
+      </script>
+    </head>
+    <body>
+        Enter a String:<input type="text" id="i1"><br><br>
+        Select One:
+        <input type="radio" name="p1" onclick="f1()" id="i2">Uppercase&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="p1" onclick="f1()" id="i3">Lowercase &nbsp;&nbsp;&nbsp;
+        <input type="radio" name="p1" onclick="f1()" id="i4">Titlecase&nbsp;&nbsp;&nbsp;
+        <p>Converted Text:<span id="o1"></span></p>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>String Concat</title>
+     <script>
+        function concat()
+        {
+        let a =document.getElementById("i1").value
+        let b=document.getElementById("i2").value
+        let c=document.getElementById("i3").checked
+        let d=document.getElementById("i4").checked
+        
+        if(c)
+        {
+            let m="Mr "+ ( b.charAt(0).toUpperCase()+b.substring(1).toLowerCase()) +"  "+( a.charAt(0).toUpperCase()+a.substring(1).toLowerCase())
+            document.getElementById("p1").innerHTML=m
+        }
+        if(d)
+        {
+              let f="Madam "+ ( b.charAt(0).toUpperCase()+b.substring(1).toLowerCase()) +"  "+( a.charAt(0).toUpperCase()+a.substring(1).toLowerCase())
+            document.getElementById("p1").innerHTML=f
+        }
+        }
+        </script>
+    </head>
+    <body>
+        Enter Firstname:<input type="text" id="i1"><br><br>
+        Enter Lastname:<input type="text" id="i2"><br><br>
+        Gender:<input type="radio" name="gender" id="i3" onclick="concat()">Male &nbsp;&nbsp;&nbsp;
+        <input type="radio" name="gender" id="i4"  onclick="concat()">Female<br><br>
+        <p id="p1"></p>  
+    </body>
+
+</html>

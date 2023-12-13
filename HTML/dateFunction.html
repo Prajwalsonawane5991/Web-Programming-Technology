@@ -1,0 +1,52 @@
+<html>
+    <head>
+     <script>
+     function f1() {
+        
+        const months = ["January","February","March","April","May","June","July",
+        "August","September","October","November","December"];
+        let m=parseInt(document.getElementById("s1").value)
+        let month=months[m-1]
+        document.getElementById("r1").innerHTML=month
+    }
+    function f2()
+    {
+        const week=["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let w=+document.getElementById("s2").value
+        let weeks=week[w-1]
+        document.getElementById("r2").innerHTML=weeks
+    }
+     </script>
+    </head>
+    <body>
+       Choose number of Month:
+     <select id="s1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+     </select><br><br>
+     Choose Number of Week:
+     <select id="s2">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+     </select><br><br>
+     <input type="button"  value="GetmonthName" onclick="f1()">
+     <p>Name of Month:<span id="r1"></span></p>
+     <input type="button"  value="GetweekName" onclick="f2()">
+    <p>Name of Day :<span id="r2"></span></p> 
+    </body>
+</html>

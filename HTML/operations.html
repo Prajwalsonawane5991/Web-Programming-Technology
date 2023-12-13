@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Operations On Numbers</title>
+        <script>
+            function operation(){
+
+                let result
+          let s=parseInt(document.getElementById("n1").value)
+          let t=parseInt(document.getElementById("n2").value)
+          let ch=document.getElementById("s1").value
+       
+          switch(ch)
+          {
+            case "+":
+                 result=s+t;break;
+             case "-":
+                 result=s-t;break;
+             case "*":
+                 result=s*t;break;
+             case "/":
+                 result=s/t;break;
+                 
+          }
+        
+        let out=result
+          document.getElementById("p1").innerText=out
+        }
+        </script>
+        <body>
+            Enter number first:<input type="number" id="n1"><br><br>
+            Enter number second:<input type="number" id="n2"><br><br>
+            Select Operation:<select onchange="operation()" id="s1">
+                <option>select </option>
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+            </select>
+            <p>Output:<span id="p1"></span></p>            
+
+        </body>
+    </head>
+</html>

@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Currency Converter</title>
+        <script>
+            function convert()
+            {
+                let s =parseInt(document.getElementById("amt").value)
+                let b =document.getElementById("formcur").value
+                let c =document.getElementById("tocur").value
+                console.log(b+" "+c)
+                let result
+                if(b=="Euro" && c=="Rupees")
+               {
+                
+                    result=s*89.93
+             
+               }
+               if(b=="Doller" && c=="Rupees")
+               {
+               
+                    result=s*83.23
+                
+               }
+               if(b=="pound" && c=="Rupees")
+               {
+               
+                    result=s*104.92
+                
+               }
+               if(b=="Yen" && c=="Rupees")
+               {
+               
+                    result=s*0.58
+                
+               }
+               if(b=="Rupees" && c=="Rupees")
+               {
+               
+                    result=s
+                
+               }
+               console.log(result)
+               let v=parseFloat(Math.ceil(result))
+               
+               document.getElementById("p1").innerHTML=v
+
+
+
+
+                
+                
+            }
+        </script>
+    </head>
+    <body>
+        Number:<input id ="amt" type="number" ><br><br>
+        <label>
+        From Currency:<select id="formcur">
+            <option>Doller</option>
+            <option>Euro</option>
+            <option>Rupees</option>
+            <option>pound</option>
+            <option>Yen</option>
+        </select><br><br>
+    </label>
+    <lable>
+        TO:<select id="tocur">
+            <option>Rupees</option>
+        </select><br><br>
+    </label>
+        <input type="button" value="Convert" onclick="convert()">
+        <p>The Converted Amt is :<span id="p1"></span></p>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input to Array</title>
+</head>
+<body>
+  <input type="text" id="nameInput">
+  <button onclick="addName()">Add Name</button>
+  <ol id="nameList"></ol>
+
+  <script>
+    let names = [];
+
+    function addName() {
+      const input = document.getElementById('nameInput');
+      const name = input.value;
+      names.push(name);
+      input.value = '';
+
+      const list = document.getElementById('nameList');
+      list.innerHTML = '';
+      names.forEach(function(name) {
+        const listItem = document.createElement('li');
+        listItem.textContent = name;
+        list.appendChild(listItem);
+      });
+    }
+  </script>
+</body>
+</html>

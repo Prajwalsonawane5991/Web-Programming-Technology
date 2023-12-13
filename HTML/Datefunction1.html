@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Date Function</title>
+        <script>
+            function f1(){
+
+           const week=["Sunday", "Monday", "Tuesday", "Wednesday", 
+           "Thursday", "Friday", "Saturday"]
+           let w=document.getElementById("i1").value
+         let d=new Date(w)
+         let day=week[d.getDay()]
+          document.getElementById("p1").innerHTML= day
+        }
+        </script>
+        <body>
+            Enter Date:<input type="text" id="i1" ><br><br>
+            <input type="button" value="Getday" onclick="f1()"><br><br>
+            <p>Week Day of Date is:<span id="p1"></span></p>
+        </body>
+    </head>
+</html>

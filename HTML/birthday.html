@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Age Calculate</title>
+        <script>
+            function f1()
+        {
+            const d=document.getElementById("i1").value
+            today=new Date()
+            birth=new Date(d)
+            const difference=Math.abs(today-birth)
+            const Noofyears=Math.ceil(difference/(1000*60*60*24*365))
+            
+            document.getElementById("i2").innerHTML=Noofyears
+         }
+        </script>
+
+    </head>
+    <body>
+        Enter your Birthday:<input type="date" id="i1"><br><br>
+        <input type="button" value="FindAge" onclick="f1()">
+        <p>Age is:<span id="i2"></span></p>
+
+    </body>
+</html>

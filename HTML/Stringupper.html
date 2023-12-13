@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>String Conversion</title>
+        <script>
+        function convert(){
+         let s=document.getElementById("i1").value
+         let ustr=s.toUpperCase()
+         console.log(ustr)
+         document.getElementById("p1").innerHTML="<b>"+ustr+"</b>"
+        }
+        </script>
+    </head>
+    <body>
+        Enter a String:<input type="text" id="i1"><br><br>
+        <input type="button" value="CONVERT" onclick="convert()">
+        <p>String in Uppercase:<span id="p1"></span></p>
+    </body>
+</html>
