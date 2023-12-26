@@ -1,0 +1,32 @@
+<html>
+    <head>
+       <script>
+        let IntervalID,cnt=0
+        function start()
+        {
+             IntervalID=setInterval(()=>{
+                cnt++
+                document.getElementById("tf1").innerHTML=`<b>${cnt}</b>`
+            },100)
+        }
+        function stop()
+        {   
+           clearInterval(IntervalID)
+        }
+        function restart()
+        {
+            cnt=0;
+            start();
+            stop();
+        }
+       </script>
+    </head>
+    <body>
+        <div>
+            <p><input type="button" value="start" onclick="start()"/></p>
+            <p id="tf1">0</p>
+            <p><input type="button" value="stop" onclick="stop()"/></p>
+            <p><input type="button" value="restart" onclick="restart()"/></p>
+        </div>
+    </body>
+</html>

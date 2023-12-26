@@ -10,6 +10,7 @@
             let in3=document.getElementById("i4").checked
             let up,low,title
             console.log(data)
+            document.getElementById("o1").innerHTML=data
             if(in1)
             {
                up=data.toUpperCase()
@@ -30,7 +31,7 @@
       </script>
     </head>
     <body>
-        Enter a String:<input type="text" id="i1"><br><br>
+        Enter a String:<input type="text" id="i1"  onblur="f1()"/><br><br>
         Select One:
         <input type="radio" name="p1" onclick="f1()" id="i2">Uppercase&nbsp;&nbsp;&nbsp;
         <input type="radio" name="p1" onclick="f1()" id="i3">Lowercase &nbsp;&nbsp;&nbsp;

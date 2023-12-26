@@ -1,0 +1,43 @@
+<html>
+    <head>
+        
+        <script>
+            var arr=[]
+          function add()
+          {
+            let num=document.getElementById("tf1").value
+            arr.push(num)
+          }
+          function sort()
+          {
+          let a=document.getElementById("a1").checked
+          let b=document.getElementById("a2").checked
+         
+                 
+                if(a)
+                {
+                    let ascarr=arr.sort();
+                    document.getElementById("p1").innerHTML=ascarr
+                }
+               
+         
+                  
+                if(b)
+                {
+                    let b=arr.sort();
+                    let desarr=b.reverse();
+                    document.getElementById("p1").innerHTML=desarr
+                }
+               
+      
+            }
+        </script>
+    </head>
+    <body>
+        Input:<input type="text" id="tf1"><br><br>
+        Add:<input type="button" value="Add"  onclick="add()"><br>
+        Asc:<input type="radio" name="acs" id="a1" onclick="sort()"><br>
+        Desc:<input type="radio" name="acs" id="a2" onclick="sort()">
+        <p>output:<span id="p1"></span></p>
+    </body>
+</html>
