@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.0.js"></script>
+        <!-- <script>
+            $().ready(()=>{
+               $("#tf1").blur(()=>{
+
+                let str=$("#tf1").val()
+                let str1=str.toUpperCase()
+                $("#p1").html(`<b> ${str1} </b>`)
+               })
+
+               
+            })
+
+        </script> -->
+
+        <script>
+            $().ready(()=>{
+
+               $("#tf1").blur(()=>{
+
+                let str=$("#tf1").val()
+                let lc=str.toLowerCase();
+                
+                $("#p1").html(`<b>${lc}</b>`)
+                let u=str.charAt(2)
+                $("#p2").html(`<b>${u}</b>`)
+
+               })                
+            }
+            )
+        </script>
+    </head>
+    <body>
+        Input:<input type="text" id="tf1"><br><br>
+        <p>output:<span id="p1"></span></p>
+        <p>output:<span id="p2"></span></p>
+    </body>
+</html>
