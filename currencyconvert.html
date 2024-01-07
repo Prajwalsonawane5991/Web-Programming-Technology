@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Currency Converter</title>
+    <script>
+        function convert() {
+            // Get user input
+            let amount = parseFloat(document.getElementById("amt").value);
+         
+            let fromCurrency = document.getElementById("formcur").value;
+            let toCurrency = document.getElementById("tocur").value;
+
+            // Define conversion rates
+            let conversionRates = {
+                "Euro": 1,
+                "Dollar": 1.18, // Exchange rates as of a certain date
+                "Pound": 0.86,
+                "Yen": 132.25,
+                "Rupees": 89.93
+            };
+
+            // Perform the conversion
+            let result = amount * conversionRates[toCurrency] / conversionRates[fromCurrency];
+
+            // Display the result with two decimal places
+            document.getElementById("p1").innerHTML = result.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <label>
+        Amount: <input id="amt" type="number" step="0.01"><br><br>
+    </label>
+    <label>
+        From Currency: 
+        <select id="formcur">
+            <option>Euro</option>
+            <option>Dollar</option>
+            <option>Pound</option>
+            <option>Yen</option>
+            <option>Rupees</option>
+        </select><br><br>
+    </label>
+    <label>
+        To Currency: 
+        <select id="tocur">
+            <option>Euro</option>
+            <option>Dollar</option>
+            <option>Pound</option>
+            <option>Yen</option>
+            <option>Rupees</option>
+        </select><br><br>
+    </label>
+    <input type="button" value="Convert" onclick="convert()">
+    <p>The Converted Amount is: <span id="p1"></span></p>
+</body>
+</html>
