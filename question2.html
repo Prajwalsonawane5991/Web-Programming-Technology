@@ -1,0 +1,40 @@
+
+
+<html>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $().ready(() => {
+            $("#p1").change(() => {
+                let value = $("#abc").val();
+                let selectedOption = $("#p1").val();
+                $("#p2").html("");
+                switch (selectedOption) {
+                    case "B":
+                        $("#p2").html(`<b>${value}</b>`);
+                        break;
+                    case "I":
+                        $("#p2").html(`<i>${value}</i>`);
+                        break;
+                    case "U":
+                        $("#p2").html(`<u>${value}</u>`);
+                        break;
+                    case "BIU":
+                        $("#p2").html(`<i><b><u>${value}</u></b></i>`);
+                        break;
+                }
+            });
+        });
+    </script>
+    <body>
+        Enter Text: <input type="text" id="abc" />
+        <select id="p1">
+            <option>B</option>
+            <option>I</option>
+            <option>U</option>
+            <option>BIU</option>
+        </select>
+        <br>
+        <br>
+        <p id="p2"></p>
+    </body>
+</html>
